@@ -25,7 +25,7 @@ function checkURL() {
 
 // Calls the Github API (api.github.com)
 function callAPI() {
-    addLoadingGIF();
+    
 	var apiURL = "https://api.github.com/repos/" + url[2] + "/issues?state=open&per_page=100&page=" + pageNo;
     $.get(apiURL)
         .done(function (d) {
@@ -48,14 +48,13 @@ function callAPI() {
             }
             else {
 				updateRows(total,last24Hours,last7Days,after7Days);
-                removeLoadingGIF();
+                
             }
         })
 		.fail(function(e){
 			$("#errorMesg").html("Error : "+e.status+" : "+e.statusText);
 			$("#errorDiv").show();
 			updateRows();
-			removeLoadingGIF();
 		});
 		
 }
@@ -66,20 +65,4 @@ function updateRows(row1,row2,row3,row4){
 	$("#row2").html(row2!=undefined?row2:"");
 	$("#row3").html(row3!=undefined?row3:"");
 	$("#row4").html(row4!=undefined?row4:"");
-}
-
-// Removes the Loading GIF from the rows
-function removeLoadingGIF(){
-    $("#row1").removeClass("loadingImg");
-	$("#row2").removeClass("loadingImg");
-	$("#row3").removeClass("loadingImg");
-	$("#row4").removeClass("loadingImg");
-}
-
-// Adds the Loading GIF to the rows
-function addLoadingGIF(){
-    $("#row1").addClass("loadingImg");
-    $("#row2").addClass("loadingImg");
-    $("#row3").addClass("loadingImg");
-    $("#row4").addClass("loadingImg");
 }
