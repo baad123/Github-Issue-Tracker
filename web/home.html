@@ -6,35 +6,26 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
     <script src="jquery-2.1.4.min.js"></script>
     <script src="app.js"></script>
-    
+	<style>
+		h1 {color:red;}
+		h2 {color:red;}
+	</style>
+	
+	<center><h1>Assignment</h1></center>
 </head>
 
 <body class="container">
-	<br><br>
-	
-	<nav class="navbar navbar-inverse">
-      <div class="container-fluid">
-		<div class="navbar-header">
-		  <a class="navbar-brand" href="#">Shippable</a>
-		</div>
-		<div>
-		  <ul class="nav navbar-nav">
-			<li class="active"><a href="#">Assignment: Github Issue Tracker</a></li>
-		  </ul>
-		</div>
-	  </div>
-	</nav>
-	
-	
+
+	<br></br>
 	
 	<div class="form-group">
 	  <div class="col-md-12">
-		<label for="email">Github Repository URL:</label>
+		<label for="email">Please enter the github repository URL:</label>
 	  </div>
 	  
 	  <div class="col-md-12">
 		<div class="col-md-6">
-			<input type="text" placeholder="https://github.com/Shippable/support" class="form-control"
+			<input type="text" placeholder="Type URL here.." class="form-control"
 			 id="urlInput"/>
 		</div>
 		
@@ -53,7 +44,43 @@
 		</div>
 	  </div> 
 	  
-	  <div class="col-md-12" style="margin-top:20px">
+	  <br></br>
+	  <br></br>
+	  
+	  <h2>Result</h2>
+	  
+	<table class="table table-bordered"> 
+		<tr>
+		<td class="field-label col-xs-3 active">
+		  <label>Total Open Issues:</label>
+		</td>
+		<td class="col-md-9" id="row1">
+		</td>
+	  </tr>
+	  <tr>
+		<td class="field-label col-xs-3 active">
+		  <label>Last 24 Hours:</label>
+		</td>
+		<td class="col-md-9" id="row2">
+		</td>
+	  </tr>
+	  <tr>
+		<td class="field-label col-xs-3 active" >
+		  <label>Last 24 - Last 7 days:</label>
+		</td>
+		<td class="col-md-9" id="row3">
+		</td>
+	  </tr>
+	  <tr>
+		<td class="field-label col-xs-3 active">
+		  <label>More than 7 days:</label>
+		</td>
+		<td class="col-md-9" id="row4">
+		</td>
+	  </tr>
+	</table>
+	 <!-- 
+	  <div class="col-md-12" style="margin-top:5px">
 		<table border="1" class="table table-striped" style="width: 500px;">
 			<tbody>
 				<tr>
@@ -75,7 +102,7 @@
 			</tbody>
 		</table>
 	</div>
-	  
+	  -->
 	</div>
 	
 </body>
